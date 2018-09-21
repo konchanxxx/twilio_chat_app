@@ -1,0 +1,16 @@
+defaults: &defaults
+  twilio_account_sid: <%= ENV['TWILIO_ACCOUNT_SID'] %>
+  twilio_notification_service_sid: <%= ENV['TWILIO_NOTIFICATION_SERVICE_SID'] %>
+  twilio_api_key: <%= ENV['TWILIO_API_KEY'] %>
+  twilio_api_secret: <%= ENV['TWILIO_API_SECRET'] %>
+  twilio_caht_service_sid: <%= ENV['TWILIO_CHAT_SERVICE_SID'] %>
+
+development:
+  <<: *defaults
+  neat_setting: 800
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
